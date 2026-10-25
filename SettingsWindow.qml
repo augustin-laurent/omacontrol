@@ -1682,7 +1682,7 @@ Item {
     ] },
     // Last and apart: everything above configures the desktop, and this is
     // the one block about the window itself.
-    { title: strings.t("settingswindow.title.4", "OmaControl"), items: [
+    { title: strings.t("settingswindow.title.4", "Settings Center"), items: [
       { id: "omacontrol", label: strings.t("settingswindow.label.33", "Settings"), icon: "\uf013", pages: ["omacontrol"] }
     ] }
   ]
@@ -1755,7 +1755,7 @@ Item {
     "font": strings.t("settingswindow.page.font", "Font"),
     "wallpaper": strings.t("settingswindow.page.wallpaper", "Wallpaper"),
     "branding": strings.t("settingswindow.page.branding", "Branding"),
-    "omacontrol": strings.t("settingswindow.page.omacontrol", "OmaControl settings"),
+    "omacontrol": strings.t("settingswindow.page.omacontrol", "Settings Center settings"),
   })
 
   // Which item is open. Driven by the page rather than held on its own: an
@@ -2099,7 +2099,7 @@ Item {
           Text {
             textFormat: Text.PlainText
             anchors.verticalCenter: parent.verticalCenter
-            text: strings.t("settingswindow.text.1", "OmaControl")
+            text: strings.t("settingswindow.text.1", "Settings Center")
             color: root.foreground
             font.family: root.fontFamily
             font.pixelSize: Style.font.title

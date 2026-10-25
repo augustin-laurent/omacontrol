@@ -1,8 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=OmaControl
+Name=Settings Center
+Name[fr]=Centre de réglages
 GenericName=System Settings
+GenericName[fr]=Réglages système
 Comment=One window for appearance, bar, windows, input, displays, idle, plugins and compose keys
+Comment[fr]=Une fenêtre pour l'apparence, la barre, les fenêtres, la saisie, les écrans, la veille, les plugins et les touches compose
 Exec=omarchy-shell omacontrol toggle
 TryExec=omarchy-shell
 Icon=@ICON@

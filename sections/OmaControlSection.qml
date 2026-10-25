@@ -33,7 +33,7 @@ Ui.SectionBody {
   Ui.SettingGroup {
     title: strings.t("omacontrolsection.title.1", "Bar button")
     note: page.inBar ? ""
-      : strings.t("omacontrolsection.addToBar", "Add OmaControl to the bar to use these.")
+      : strings.t("omacontrolsection.addToBar", "Add Settings Center to the bar to use these.")
 
     Ui.SwitchRow {
       label: strings.t("omacontrolsection.label.1", "Show active-switch count")

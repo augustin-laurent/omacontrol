@@ -51,7 +51,11 @@ write_update_cache() {
 # the result is not JSON at all. It matters more than it did: the page's poll
 # and both halves of the marketplace lookup now read this.
 plugins_state() {
-  emit_json "$(capture omarchy plugin list --json | jq -c '[.[] | {
+  # The window is not listed among the plugins: it cannot be the list
+  # subjecting itself to its own reader. Its identity — the id below — is
+  # untouched, so `omarchy plugin` keeps working on it exactly as before;
+  # it just never appears here. `mine` still reports on it.
+  emit_json "$(capture omarchy plugin list --json | jq -c '[.[] | select(.id != "io.github.twiking.omacontrol") | {
     id: .id,
     name: (.name // .id),
     kinds: (.kinds // []),

@@ -51,7 +51,7 @@ Ui.SectionBody {
       items.push({
         id: "self",
         title: strings.tn("overviewsection.selfBehind", app.selfBehind,
-             "OmaControl is 1 commit behind").arg(app.selfBehind),
+             "Settings Center is 1 commit behind").arg(app.selfBehind),
         note: strings.t("overviewsection.note.1", "Checked once this opening."),
         actionLabel: strings.t("overviewsection.actionLabel.1", "Update"),
         update: true

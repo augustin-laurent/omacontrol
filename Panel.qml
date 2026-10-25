@@ -119,8 +119,8 @@ BarWidget {
                      .arg(root.lowDevices[i].name).arg(root.lowDevices[i].percent))
       if (root.switchedOn.length > 0)
         parts.push(strings.t("panel.tooltip.on", "%1 on").arg(root.switchedOn.join(", ")))
-      return parts.length > 0 ? strings.t("panel.tooltip.prefix", "OmaControl — ") + parts.join(" · ")
-                              : strings.t("panel.tooltip.appName", "OmaControl")
+      return parts.length > 0 ? strings.t("panel.tooltip.prefix", "Settings Center — ") + parts.join(" · ")
+                              : strings.t("panel.tooltip.appName", "Settings Center")
     }
     active: root.opened
     onPressed: function(buttonCode) {
