@@ -2,13 +2,13 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One binding: what you press, what it does, and the one action that makes
 // sense for where it came from — yours can be removed, Omarchy's can be
 // turned off, and a turned-off one can come back.
 Item {
   id: bindingRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property string keys: ""
   property string description: ""
   property string command: ""

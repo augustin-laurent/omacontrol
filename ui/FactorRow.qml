@@ -2,11 +2,11 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A multiplier such as a display scale or scroll speed, in steps of 0.05.
 Local.SettingRow {
   id: factorRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property real value: 1
   property real minimum: 0.1
   property real maximum: 3

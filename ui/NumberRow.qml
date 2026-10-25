@@ -2,11 +2,11 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A whole number on a slider, written only when the drag ends.
 Local.SettingRow {
   id: numberRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property int value: 0
   property int from: 0
   property int to: 100

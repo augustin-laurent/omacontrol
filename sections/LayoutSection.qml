@@ -1,6 +1,6 @@
 import QtQuick
+import qs.Commons
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -10,6 +10,7 @@ import "../ui" as Ui
 // do nothing, so each group appears only when its engine is the active one.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property string engine: String(app.hyprValue("layout", "dwindle"))

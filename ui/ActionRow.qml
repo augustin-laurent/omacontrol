@@ -1,12 +1,13 @@
 import QtQuick
+import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A row whose setting lives behind someone else's flow: the state is shown,
 // and the button hands off to the command that owns it.
 Local.SettingRow {
   id: actionRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property string buttonText: ""
   signal triggered()
 

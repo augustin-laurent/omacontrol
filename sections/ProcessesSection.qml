@@ -3,7 +3,6 @@ import QtQuick.Layouts
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -14,6 +13,7 @@ import "../ui" as Ui
 // it, the way btop draws it.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property var cores: app.processes.cores !== undefined ? app.processes.cores : []

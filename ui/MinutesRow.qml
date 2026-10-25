@@ -2,11 +2,11 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A duration stored in seconds but edited in whole minutes.
 Local.SettingRow {
   id: minutesRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property int seconds: 0
   signal committed(int mins)
 

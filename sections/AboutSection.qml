@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Commons
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -16,6 +15,7 @@ import "../ui" as Ui
 // in the shape a bug report wants.
 Ui.SectionBody {
   id: root
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property var about: app.about

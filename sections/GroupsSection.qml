@@ -1,6 +1,6 @@
 import QtQuick
+import qs.Commons
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -8,6 +8,7 @@ import "../ui" as Ui
 // The tab strip drawn on grouped windows. Its colours come from the theme.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property bool barOn: app.hyprValue("groupbar", true) === true

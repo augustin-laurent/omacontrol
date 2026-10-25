@@ -3,10 +3,10 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 SettingRow {
   id: pickerRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var options: []
   property string value: ""
   property bool searchable: false

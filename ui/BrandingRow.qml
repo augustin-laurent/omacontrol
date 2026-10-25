@@ -2,12 +2,12 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Three ways to set one piece of branding, the way the menu offers them:
 // type it, point at an image, or put the shipped one back.
 Local.SettingRow {
   id: brandingRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   // "text", "image" or "default" — the caller decides what each one runs.
   signal chose(string variant)
 

@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One font, shown in itself: its name, set large in the face.
 //
@@ -14,6 +13,7 @@ import "." as Local
 // be walked to and chosen without the mouse.
 Item {
   id: specimen
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property string family: ""
   property bool current: false

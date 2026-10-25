@@ -17,7 +17,10 @@
   "aboutsection.label.8": "Compositor",
   "aboutsection.label.9": "Packages",
   "aboutsection.osAge": "%1 days",
-  "aboutsection.packagesWaiting": "1 package waiting",
+  "aboutsection.packagesWaiting": {
+    "one": "1 package waiting",
+    "other": "%1 packages waiting"
+  },
   "aboutsection.text.1": "Copy as text",
   "aboutsection.text.2": "Up to date",
   "aboutsection.thisComputer": "This computer",
@@ -596,18 +599,33 @@
   "overviewsection.actionText.1": "Update",
   "overviewsection.actionText.2": "Open Packages",
   "overviewsection.actionText.3": "Open Plugins",
-  "overviewsection.attention": "1 thing needs attention",
+  "overviewsection.attention": {
+    "one": "1 thing needs attention",
+    "other": "%1 things need attention"
+  },
   "overviewsection.description.1": "Waiting in the repositories and the AUR.",
   "overviewsection.fetched": "fetched %1",
   "overviewsection.mirrorsNever": "Mirrors have not been checked yet.",
-  "overviewsection.newsNew": "1 new",
+  "overviewsection.newsNew": {
+    "one": "1 new",
+    "other": "%1 new"
+  },
   "overviewsection.note.1": "Checked once this opening.",
   "overviewsection.onChannel": "%1 channel",
   "overviewsection.onVersion": "You are on %1",
   "overviewsection.open": "Open",
-  "overviewsection.packagesWaiting": "1 package",
-  "overviewsection.pluginsWaiting": "1 plugin",
-  "overviewsection.selfBehind": "OmaControl is 1 commit behind",
+  "overviewsection.packagesWaiting": {
+    "one": "1 package",
+    "other": "%1 packages"
+  },
+  "overviewsection.pluginsWaiting": {
+    "one": "1 plugin",
+    "other": "%1 plugins"
+  },
+  "overviewsection.selfBehind": {
+    "one": "OmaControl is 1 commit behind",
+    "other": "OmaControl is %1 commits behind"
+  },
   "overviewsection.text.1": "Mark all as read",
   "overviewsection.title.1": "Needs attention",
   "overviewsection.title.2": "Updates",
@@ -686,9 +704,18 @@
   "plugins.updated": "Updated.",
   "pluginssection.acrossYouInstalled": "across %1 you installed",
   "pluginssection.added": "Added",
-  "pluginssection.agoDays": "1 day ago",
-  "pluginssection.agoHours": "1 hour ago",
-  "pluginssection.agoMinutes": "1 minute ago",
+  "pluginssection.agoDays": {
+    "one": "1 day ago",
+    "other": "%1 days ago"
+  },
+  "pluginssection.agoHours": {
+    "one": "1 hour ago",
+    "other": "%1 hours ago"
+  },
+  "pluginssection.agoMinutes": {
+    "one": "1 minute ago",
+    "other": "%1 minutes ago"
+  },
   "pluginssection.alwaysOnWhy": "The shell will not start without this one.",
   "pluginssection.buttonText.1": "Open",
   "pluginssection.buttonText.2": "Remove",
@@ -696,7 +723,10 @@
   "pluginssection.checkedAgoLabel": "Checked %1",
   "pluginssection.checkingLower": "checking…",
   "pluginssection.closesForAMoment": "a moment and comes back with the result.",
-  "pluginssection.commitsWaiting": "1 commit waiting",
+  "pluginssection.commitsWaiting": {
+    "one": "1 commit waiting",
+    "other": "%1 commits waiting"
+  },
   "pluginssection.couldNotAdd": "Could not add it",
   "pluginssection.couldNotUpdate": "Could not update %1",
   "pluginssection.description.1": "Not a sandbox and not a separate process: it runs in the ",
@@ -934,7 +964,10 @@
   "settingswindow.cancelText.1": "Cancel",
   "settingswindow.cancelText.2": "Cancel",
   "settingswindow.confirmText.1": "Reset all",
-  "settingswindow.daysAgo": "%1 day ago",
+  "settingswindow.daysAgo": {
+    "one": "1 day ago",
+    "other": "%1 days ago"
+  },
   "settingswindow.hoursAgo": "%1 h ago",
   "settingswindow.label.1": "Automatic",
   "settingswindow.label.10": "Bluetooth",
@@ -1010,7 +1043,10 @@
   "settingswindow.placeholderText.1": "Search settings",
   "settingswindow.resetAllMessage": "Reset all %1 settings changed from this window?",
   "settingswindow.resetOneMessage": "Reset the one setting changed from this window?",
-  "settingswindow.settingsChanged": "1 setting changed",
+  "settingswindow.settingsChanged": {
+    "one": "1 setting changed",
+    "other": "%1 settings changed"
+  },
   "settingswindow.text.1": "OmaControl",
   "settingswindow.text.3": "Undo all",
   "settingswindow.text.4": "Nothing here for what you typed.",
@@ -1064,7 +1100,10 @@
   "tmuxsection.title.4": "Behaviour",
   "tmuxsection.title.5": "Beyond these settings",
   "toggletile.label.1": "Toggle",
-  "update.commitsBehind": "1 commit behind",
+  "update.commitsBehind": {
+    "one": "1 commit behind",
+    "other": "%1 commits behind"
+  },
   "updates.mirrorsChecked": "Mirrors last checked %1",
   "usagesection.description.1": "Nothing on this machine collects it. Omarchy ships collectors for Claude Code, Codex and Fireworks.",
   "usagesection.label.1": "No agent usage to report",
@@ -1166,7 +1205,10 @@
   "workspacessection.label.8": "Borderless, no gaps",
   "workspacessection.label.9": "Pick a workspace…",
   "workspacessection.rulesNone": "No application is bound to a workspace yet.",
-  "workspacessection.rulesOpen": "One application opens somewhere of its own.",
+  "workspacessection.rulesOpen": {
+    "one": "One application opens somewhere of its own.",
+    "other": "%1 applications open somewhere of their own."
+  },
   "workspacessection.title.1": "Applications",
   "workspacessection.title.2": "Workspace settings",
   "workspacessection.workspace": "Workspace %1"

@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Everything this desktop can be told about one application: where it opens,
 // how it shows, whether it starts at login. It is a component rather than a
@@ -13,6 +12,7 @@ import "." as Local
 // on the first write: there is nothing to add first.
 SettingGroup {
   id: appRules
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
   property var displays: []
 

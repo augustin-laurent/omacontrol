@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A row that is entirely a link: the whole width is the target, with whatever
 // the source calls the date at the far end. For lists where every row goes
@@ -9,6 +8,7 @@ import "." as Local
 // per row would be one button per row doing what the row already does.
 Local.NavRow {
   id: linkRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property string value: ""
   // Unread rows carry a star. It is both the mark and the way to clear it:
   // there is nothing else a reader would want to do to a star, so making it

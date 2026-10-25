@@ -2,13 +2,13 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A short list of choices shown side by side rather than hidden behind a
 // dropdown: when there are only a handful and their names are short, seeing
 // them all is faster than opening a list to find out what they are.
 SettingRow {
   id: choiceRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property var options: []
   property string value: ""

@@ -2,7 +2,6 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One network: name, band, signal, what it wants to let you in, and what
 // clicking it will do. A network that needs a password asks for it in place
@@ -19,6 +18,7 @@ import "." as Local
 // renders as an empty band. The content goes in an inner Column instead.
 Item {
   id: wifiRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property string ssid: ""
   property int signalStrength: 0
   property bool secured: false

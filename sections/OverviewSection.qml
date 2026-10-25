@@ -3,7 +3,6 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -17,6 +16,7 @@ import "../ui" as Ui
 // rather than kept — so this page cannot disagree with the bar.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property var toggles: app.overview.toggles !== undefined ? app.overview.toggles : []

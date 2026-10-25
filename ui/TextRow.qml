@@ -2,10 +2,10 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 Local.SettingRow {
   id: textRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property string value: ""
   property string placeholder: ""
   signal committed(string next)

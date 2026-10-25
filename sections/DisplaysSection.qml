@@ -5,12 +5,12 @@ import qs.Commons
 import qs.Ui
 import "../ui" as Ui
 import "../ui/displays.js" as Geometry
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   // A display you own is not always plugged in, and Hyprland matches its

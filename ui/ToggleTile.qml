@@ -2,7 +2,6 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One switch, as a tile: icon, name over what it is doing, then the switch —
 // all on one line. Four across.
@@ -23,6 +22,7 @@ import "." as Local
 // strip of chrome across the top, not the subject of the page.
 Local.NavRow {
   id: tile
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property string glyph: ""
   property string note: ""

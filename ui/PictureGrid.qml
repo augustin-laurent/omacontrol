@@ -4,7 +4,6 @@ import QtQuick.Effects
 import QtQuick.Window
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A wall of pictures to choose one from: themes, wallpapers.
 //
@@ -19,6 +18,7 @@ import "." as Local
 // wallpaper can be anything, and a row of mixed heights reads as a mistake.
 Item {
   id: grid
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property var items: []
   property real tileWidth: Style.space(190)

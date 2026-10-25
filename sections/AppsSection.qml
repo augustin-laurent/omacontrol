@@ -3,7 +3,6 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -18,6 +17,7 @@ import "../ui" as Ui
 // state document, like Disk and Processes.
 Ui.SectionBody {
   id: root
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property var items: app.apps !== undefined && app.apps !== null ? app.apps : []

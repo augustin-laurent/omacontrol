@@ -6,8 +6,6 @@ import qs.Commons
 import qs.Commons as Commons
 import qs.Ui
 
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("i18n") }
-
 // The bar's way into OmaControl: a gear that opens the window.
 //
 // Nothing but the button lives here. The window and the IPC route are the
@@ -16,6 +14,7 @@ import qs.Ui
 // button and nothing else.
 BarWidget {
   id: root
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("i18n") }
   moduleName: "io.github.twiking.omacontrol"
 
   // Either name of Omarchy's theme singleton, as in Palette.qml.

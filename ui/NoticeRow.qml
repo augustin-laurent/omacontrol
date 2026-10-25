@@ -2,7 +2,6 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Something the window is telling you that you did not ask about: a partition
 // filling up, a peripheral about to die, an update waiting. An icon to say how
@@ -14,6 +13,7 @@ import "." as Local
 // at the same end of a row makes that a coin toss.
 Local.NavRow {
   id: notice
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property string glyph: ""
   property bool urgent: false

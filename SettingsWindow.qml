@@ -8,7 +8,6 @@ import Quickshell.Wayland
 import qs.Commons
 import qs.Ui
 import "ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("i18n") }
 
 // OmaControl — one window for the settings that otherwise live scattered
 // across ~/.config/omarchy/shell.json, the Hyprland config in ~/.config/hypr,
@@ -20,6 +19,7 @@ import "ui" as Ui
 // one-time backup taken before any hand-written file is touched.
 Item {
   id: root
+  Translations { id: strings; directory: Qt.resolvedUrl("i18n") }
 
   // ---------------- window lifecycle ---------------------------------------
   readonly property bool shown: window.visible

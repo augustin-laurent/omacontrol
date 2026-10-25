@@ -2,11 +2,11 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A 0–1 value shown as a percentage.
 Local.SettingRow {
   id: percentRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property real value: 1
   signal committed(real next)
 

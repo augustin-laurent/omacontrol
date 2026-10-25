@@ -2,13 +2,13 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A setting: its name on the left, the control that sets it on the right —
 // the shape every row of every page shares. What makes it navigable is
 // NavRow underneath; this is only the layout.
 NavRow {
   id: settingRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   default property alias control: controlHolder.data
 

@@ -1,12 +1,12 @@
 import QtQuick
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One thing in a list you pick from: a name, an optional detail, and the
 // selected one marked rather than described. The whole row is the target.
 Item {
   id: pickableRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property string label: ""
   property string glyph: ""

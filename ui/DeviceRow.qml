@@ -1,13 +1,13 @@
 import QtQuick
 import qs.Commons
 import "." as Local
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One Bluetooth device: what it is, how it is doing, and the actions that
 // apply to it. A device you own can be connected or forgotten; one the
 // adapter merely saw can only be paired.
 Item {
   id: deviceRow
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
   property string address: ""
   property string name: ""

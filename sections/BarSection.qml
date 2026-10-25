@@ -4,12 +4,12 @@ import Quickshell.Io
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
-  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
 Ui.SectionBody {
   id: page
+  Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
   property var app: null
 
   readonly property var layout: (app.barState.layout !== undefined ? app.barState.layout : ({}))
@@ -176,7 +176,9 @@ Ui.SectionBody {
           })
 
           function sectionTitle(key) {
-            return key === "left" ? strings.t("barsection.left", "Left")\n                 : key === "center" ? strings.t("barsection.center", "Center")\n                 : strings.t("barsection.right", "Right")
+            return key === "left" ? strings.t("barsection.left", "Left")
+                 : key === "center" ? strings.t("barsection.center", "Center")
+                 : strings.t("barsection.right", "Right")
           }
 
           // Everything you can do to a row sits in front of its name, in the
