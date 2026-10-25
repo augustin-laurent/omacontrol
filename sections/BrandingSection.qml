@@ -1,5 +1,6 @@
 import QtQuick
 import "../ui" as Ui
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -19,7 +20,7 @@ Ui.SectionBody {
   // exclusively while it is open, so whatever opened would sit behind it with
   // nothing reaching it. The window goes first.
   Ui.SettingGroup {
-    title: "Screensaver"
+    title: strings.t("brandingsection.title.1", "Screensaver")
 
     Ui.AsciiPreview {
       visible: text !== ""
@@ -35,7 +36,7 @@ Ui.SectionBody {
   }
 
   Ui.SettingGroup {
-    title: "About screen"
+    title: strings.t("brandingsection.title.2", "About screen")
 
     Ui.AsciiPreview {
       visible: text !== ""

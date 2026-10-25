@@ -3,6 +3,7 @@ import Quickshell.Io
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -14,10 +15,10 @@ Ui.SectionBody {
   // it, so there is nothing here for a timer to watch.
   Component.onCompleted: app.readUnlocks()
   Ui.SettingGroup {
-    title: "Timeouts"
+    title: strings.t("idlesection.title.1", "Timeouts")
 
     Ui.MinutesRow {
-      label: "Screensaver after"
+      label: strings.t("idlesection.label.1", "Screensaver after")
       seconds: page.app.idleState.screensaver !== undefined ? Number(page.app.idleState.screensaver) : 150
       onCommitted: function(mins) { page.app.set("idle-screensaver", mins * 60) }
       changed: page.app.isChanged("idle-screensaver")
@@ -25,7 +26,7 @@ Ui.SectionBody {
     }
 
     Ui.MinutesRow {
-      label: "Lock after"
+      label: strings.t("idlesection.label.2", "Lock after")
       seconds: page.app.idleState.lock !== undefined ? Number(page.app.idleState.lock) : 300
       onCommitted: function(mins) { page.app.set("idle-lock", mins * 60) }
       changed: page.app.isChanged("idle-lock")
@@ -39,8 +40,8 @@ Ui.SectionBody {
   // terminal with its own password prompt; the ring moves when the list comes
   // back saying it took.
   Ui.SettingGroup {
-    title: "Unlock animation"
-    note: "Shown while the machine starts up and while it unlocks."
+    title: strings.t("idlesection.title.2", "Unlock animation")
+    note: strings.t("idlesection.note.1", "Shown while the machine starts up and while it unlocks.")
     visible: !searchEmpty && page.app.unlockList.length > 0
 
     Ui.PictureGrid {

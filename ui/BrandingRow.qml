@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Three ways to set one piece of branding, the way the menu offers them:
 // type it, point at an image, or put the shipped one back.
@@ -15,7 +16,7 @@ Local.SettingRow {
     spacing: Style.space(8)
 
     Button {
-      text: "Text…"
+      text: strings.t("brandingrow.text.1", "Text…")
       bordered: true
       foreground: Local.Palette.foreground
       accent: Local.Palette.accent
@@ -24,7 +25,7 @@ Local.SettingRow {
     }
 
     Button {
-      text: "Image…"
+      text: strings.t("brandingrow.text.2", "Image…")
       bordered: true
       foreground: Local.Palette.foreground
       accent: Local.Palette.accent
@@ -33,7 +34,7 @@ Local.SettingRow {
     }
 
     Button {
-      text: "Reset"
+      text: strings.t("brandingrow.text.3", "Reset")
       bordered: true
       foreground: Local.Palette.foreground
       accent: Local.Palette.accent

@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Commons
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One font, shown in itself: its name, set large in the face.
 //
@@ -22,7 +23,7 @@ Item {
     id: nav
     anchors.fill: parent
     searchText: specimen.family
-    navKeys: [{ key: "Space", label: "Use this font" }]
+    navKeys: [{ key: "Space", label: strings.t("specimenrow.label.1", "Use this font")}]
     onNavActivate: specimen.chose()
   }
 

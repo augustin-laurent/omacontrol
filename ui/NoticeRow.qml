@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Something the window is telling you that you did not ask about: a partition
 // filling up, a peripheral about to die, an update waiting. An icon to say how
@@ -97,7 +98,7 @@ Local.NavRow {
       textFormat: Text.PlainText
       anchors.verticalCenter: parent.verticalCenter
       visible: notice.dismissable
-      text: ""
+      text: strings.t("noticerow.text.1", "")
       color: dismissMouse.containsMouse ? Local.Palette.foreground : Local.Palette.shade(0.35)
       font.family: Local.Palette.fontFamily
       font.pixelSize: Style.font.body

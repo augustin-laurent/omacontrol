@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Commons
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A row that is entirely a link: the whole width is the target, with whatever
 // the source calls the date at the far end. For lists where every row goes
@@ -20,8 +21,8 @@ Local.NavRow {
   // legend offering "Space — Mark read" would open the article instead. The
   // step keys are the ones a row can tell apart.
   navKeys: linkRow.unread
-    ? [{ key: "↵", label: "Open" }, { key: "→", label: "Mark read" }]
-    : [{ key: "↵", label: "Open" }]
+    ? [{ key: "↵", label: strings.t("linkrow.label.1", "Open")}, { key: "→", label: strings.t("linkrow.label.2", "Mark read")}]
+    : [{ key: "↵", label: strings.t("linkrow.label.3", "Open")}]
   onNavActivate: linkRow.triggered()
   onNavStep: function(delta) { if (delta > 0 && linkRow.unread) linkRow.starred() }
 

@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A whole number on a slider, written only when the drag ends.
 Local.SettingRow {
@@ -31,7 +32,7 @@ Local.SettingRow {
     if (value === pending || value !== basis) stepping = false
   }
 
-  navKeys: [{ key: "\u2190\u2192", label: "Adjust" }]
+  navKeys: [{ key: "\u2190\u2192", label: strings.t("numberrow.label.1", "Adjust")}]
 
   function commit(next) {
     var wanted = Math.max(numberRow.from, Math.min(numberRow.to, Math.round(next)))

@@ -284,13 +284,13 @@ state() {
                     label: (.[labelKey] // "" | tostring),
                     description: (.[descKey] // "" | tostring) }
         | select(.label != "") ];
-    { audio: (entries($audio.outputs; "Output"; "description"; "name")
-              + entries($audio.inputs; "Input"; "description"; "name")),
-      bindings: entries($bindings.items; "Keybindings"; "keys"; "description"),
-      workspaces: (entries($workspaces.rules; "Applications"; "name"; "class")
-                   + entries($workspaces.setups; "Workspaces"; "label"; "name")),
-      plugins: entries($plugins; "Plugins"; "name"; "id"),
-      displays: entries($monitors; "Displays"; "label"; "name") }'''))
+    { audio: (entries($audio.outputs; '"$(i18n_t search.output 'Output')"'; "description"; "name")
+              + entries($audio.inputs; '"$(i18n_t search.input 'Input')"'; "description"; "name")),
+      bindings: entries($bindings.items; '"$(i18n_t search.keybindings 'Keybindings')"'; "keys"; "description"),
+      workspaces: (entries($workspaces.rules; '"$(i18n_t search.applications 'Applications')"'; "name"; "class")
+                   + entries($workspaces.setups; '"$(i18n_t search.workspaces 'Workspaces')"'; "label"; "name")),
+      plugins: entries($plugins; '"$(i18n_t search.plugins 'Plugins')"'; "name"; "id"),
+      displays: entries($monitors; '"$(i18n_t search.displays 'Displays')"'; "label"; "name") }'''))
 
   jq -cn \
     --argjson cfg "$cfg" \

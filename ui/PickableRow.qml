@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Commons
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One thing in a list you pick from: a name, an optional detail, and the
 // selected one marked rather than described. The whole row is the target.
@@ -19,7 +20,7 @@ Item {
     id: nav
     anchors.fill: parent
     searchText: pickableRow.label + " " + pickableRow.detail
-    navKeys: [{ key: "Space", label: "Select" }]
+    navKeys: [{ key: "Space", label: strings.t("pickablerow.label.1", "Select")}]
     onNavActivate: pickableRow.picked()
   }
 

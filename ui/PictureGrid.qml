@@ -4,6 +4,7 @@ import QtQuick.Effects
 import QtQuick.Window
 import qs.Commons
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A wall of pictures to choose one from: themes, wallpapers.
 //
@@ -133,7 +134,7 @@ Item {
             textFormat: Text.PlainText
             anchors.centerIn: parent
             visible: tile.modelData.source === ""
-            text: "No preview"
+            text: strings.t("picturegrid.text.1", "No preview")
             color: Local.Palette.muted
             font.family: Local.Palette.fontFamily
             font.pixelSize: Style.font.caption

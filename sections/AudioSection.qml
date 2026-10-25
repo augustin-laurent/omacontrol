@@ -3,6 +3,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "../ui" as Ui
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // Injected by the window when the page is loaded: the state every
 // row reads, and the calls every control makes.
@@ -37,16 +38,16 @@ Ui.SectionBody {
 
   Ui.SettingGroup {
     rowSpacing: Style.space(2)
-    title: "Output"
+    title: strings.t("audiosection.title.1", "Output")
 
     Ui.PercentRow {
-      label: "Volume"
+      label: strings.t("audiosection.label.1", "Volume")
       value: page.currentOutput ? Number(page.currentOutput.volume) / 100 : 0
       onCommitted: function(next) { page.app.run(["audio", "volume", "output", String(Math.round(next * 100))]) }
     }
 
     Ui.SwitchRow {
-      label: "Muted"
+      label: strings.t("audiosection.label.2", "Muted")
       checked: page.currentOutput ? page.currentOutput.muted === true : false
       onRequested: function(next) { page.app.run(["audio", "mute", "output", next ? "on" : "off"]) }
     }
@@ -67,16 +68,16 @@ Ui.SectionBody {
 
   Ui.SettingGroup {
     rowSpacing: Style.space(2)
-    title: "Input"
+    title: strings.t("audiosection.title.2", "Input")
 
     Ui.PercentRow {
-      label: "Volume"
+      label: strings.t("audiosection.label.3", "Volume")
       value: page.currentInput ? Number(page.currentInput.volume) / 100 : 0
       onCommitted: function(next) { page.app.run(["audio", "volume", "input", String(Math.round(next * 100))]) }
     }
 
     Ui.SwitchRow {
-      label: "Muted"
+      label: strings.t("audiosection.label.4", "Muted")
       checked: page.currentInput ? page.currentInput.muted === true : false
       onRequested: function(next) { page.app.run(["audio", "mute", "input", next ? "on" : "off"]) }
     }

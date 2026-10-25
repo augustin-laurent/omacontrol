@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A setting: its name on the left, the control that sets it on the right —
 // the shape every row of every page shares. What makes it navigable is
@@ -80,7 +81,7 @@ NavRow {
         textFormat: Text.PlainText
         anchors.baseline: titleText.baseline
         visible: settingRow.changed
-        text: "(reset)"
+        text: strings.t("settingrow.text.1", "(reset)")
         color: resetMouse.containsMouse ? Local.Palette.accent : Local.Palette.muted
         font.family: Local.Palette.fontFamily
         font.pixelSize: Style.font.caption

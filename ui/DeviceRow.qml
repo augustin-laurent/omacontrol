@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Commons
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One Bluetooth device: what it is, how it is doing, and the actions that
 // apply to it. A device you own can be connected or forgotten; one the
@@ -28,9 +29,9 @@ Item {
     id: nav
     anchors.fill: parent
     searchText: deviceRow.title + " " + deviceRow.address + " " + deviceRow.kind
-    navKeys: deviceRow.connected ? [{ key: "Space", label: "Disconnect" }]
-      : (deviceRow.paired ? [{ key: "Space", label: "Connect" }]
-                          : [{ key: "Space", label: "Pair" }])
+    navKeys: deviceRow.connected ? [{ key: "Space", label: strings.t("devicerow.label.1", "Disconnect")}]
+      : (deviceRow.paired ? [{ key: "Space", label: strings.t("devicerow.label.2", "Connect")}]
+                          : [{ key: "Space", label: strings.t("devicerow.label.3", "Pair")}])
     onNavActivate: {
       if (deviceRow.connected) deviceRow.disconnectRequested()
       else if (deviceRow.paired) deviceRow.connectRequested()

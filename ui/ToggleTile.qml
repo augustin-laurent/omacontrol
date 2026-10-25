@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // One switch, as a tile: icon, name over what it is doing, then the switch —
 // all on one line. Four across.
@@ -34,7 +35,7 @@ Local.NavRow {
   showBand: false
 
   onNavActivate: tile.requested(!tile.checked)
-  navKeys: [{ key: "Space", label: "Toggle" }]
+  navKeys: [{ key: "Space", label: strings.t("toggletile.label.1", "Toggle")}]
 
   implicitHeight: Math.max(badge.height, control.height) + Style.space(18)
 

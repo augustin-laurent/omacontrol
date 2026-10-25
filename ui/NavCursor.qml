@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // The keyboard cursor for a row that is not a SettingRow.
 //
@@ -27,7 +28,7 @@ Item {
   signal resetRequested()
   // What ⌫ is called on this row. A thing you created is not reset, it is
   // removed or forgotten, and the legend has to say which.
-  property string navResetLabel: "Reset"
+  navResetLabel: strings.t("navcursor.navResetLabel.1", "Reset")
 
   // Behind the row's own content: the band is a background, and drawing it
   // over the text would tint what it is meant to be pointing at.

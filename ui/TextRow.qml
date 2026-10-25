@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 Local.SettingRow {
   id: textRow
@@ -37,8 +38,8 @@ Local.SettingRow {
   property bool editing: false
 
   navKeys: editing
-    ? [{ key: "\u21b5", label: clearOnCommit ? "Add" : "Save" }, { key: "Esc", label: "Cancel" }]
-    : [{ key: "\u21b5", label: "Edit" }]
+    ? [{ key: "\u21b5", label: clearOnCommit ? strings.t("textrow.add", "Add") : strings.t("textrow.save", "Save") }, { key: "Esc", label: strings.t("textrow.label.1", "Cancel")}]
+    : [{ key: "\u21b5", label: strings.t("textrow.label.2", "Edit")}]
 
   // One door for the button and the key, so the two cannot drift apart.
   function commit(next) {

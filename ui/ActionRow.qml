@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A row whose setting lives behind someone else's flow: the state is shown,
 // and the button hands off to the command that owns it.
@@ -15,7 +16,7 @@ Local.SettingRow {
   property bool actionEnabled: true
 
   // The row has one button, so activating the row presses it.
-  navKeys: [{ key: "\u21b5", label: "Open" }]
+  navKeys: [{ key: "\u21b5", label: strings.t("actionrow.label.1", "Open")}]
 
   onNavActivate: if (actionRow.actionEnabled) actionRow.triggered()
 

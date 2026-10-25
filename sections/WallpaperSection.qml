@@ -17,7 +17,7 @@ Ui.SectionBody {
     // "next background" walks, in its order.
     title: ""
     note: page.app.wallpaperList.length === 0
-      ? "This theme ships no backgrounds." : ""
+      ? strings.t("wallpapersection.noBackgrounds", "This theme ships no backgrounds.") : ""
 
     Ui.PictureGrid {
       items: page.wallpaperTiles

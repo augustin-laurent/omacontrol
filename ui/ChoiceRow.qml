@@ -2,6 +2,7 @@ import QtQuick
 import qs.Commons
 import qs.Ui
 import "." as Local
+  Commons.Translations { id: strings; directory: Qt.resolvedUrl("../i18n") }
 
 // A short list of choices shown side by side rather than hidden behind a
 // dropdown: when there are only a handful and their names are short, seeing
@@ -37,7 +38,7 @@ SettingRow {
     if (next !== at) choiceRow.picked(String(list[next].value))
   }
 
-  navKeys: [{ key: "\u2190\u2192", label: "Choose" }]
+  navKeys: [{ key: "\u2190\u2192", label: strings.t("choicerow.label.1", "Choose")}]
 
   onNavStep: function(delta) { choiceRow.navPick(delta) }
   onNavActivate: choiceRow.navPick(1)
