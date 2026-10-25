@@ -1426,6 +1426,7 @@ Item {
       case "nvim": return ["nvim", "hyprChanged"]
       case "wifi": return ["wifi"]
       case "bluetooth": return ["bluetooth"]
+      case "language": return ["language"]
       case "audio": return ["audio"]
       case "power": return ["power"]
       // The three live pages keep their own readings and poll for them, so a
@@ -1459,6 +1460,9 @@ Item {
     return command === "overview" || command === "disk" || command === "processes"
       || command === "packages" || command === "apps" || command === "usage" || command === "news"
       || command === "about"
+      // A language switch restarts the shell: the slice read answers first,
+      // and the fresh window whole-reads again anyway.
+      || command === "language"
       // Opening an editor changes nothing until the editor is closed.
       || command === "hosts"
       // Starting the migration only detaches it; the Overview poll is what
@@ -1665,6 +1669,7 @@ Item {
       { id: "disk", label: strings.t("settingswindow.label.23", "Storage"), icon: "\uf0a0", pages: ["disk"] },
       { id: "proc", label: strings.t("settingswindow.label.24", "Processes"), icon: "\uf080", pages: ["processes"] },
       { id: "time", label: strings.t("settingswindow.label.25", "Date & Time"), icon: "\uf017", pages: ["datetime"] },
+      { id: "lang", label: strings.t("settingswindow.label.34", "Language"), icon: "\uf1ab", pages: ["language"] },
       { id: "about", label: strings.t("settingswindow.label.26", "About"), icon: "\uf05a", pages: ["about"] }
     ] },
     { title: strings.t("settingswindow.title.3", "Apps & Packages"), items: [
@@ -1736,6 +1741,7 @@ Item {
     "disk": strings.t("settingswindow.page.disk", "Disk"),
     "processes": strings.t("settingswindow.page.processes", "Processes"),
     "datetime": strings.t("settingswindow.page.datetime", "Date & Time"),
+    "language": strings.t("settingswindow.page.language", "Language"),
     "about": strings.t("settingswindow.page.about", "About"),
     "apps.list": strings.t("settingswindow.page.apps.list", "Apps"),
     "apps.defaults": strings.t("settingswindow.page.apps.defaults", "Defaults"),
@@ -1841,6 +1847,7 @@ Item {
     case "plugins": return "sections/PluginsSection.qml"
     case "compose": return "sections/ComposeSection.qml"
     case "datetime": return "sections/DateTimeSection.qml"
+    case "language": return "sections/LanguageSection.qml"
     case "network": return "sections/NetworkSection.qml"
     case "bluetooth": return "sections/BluetoothSection.qml"
     case "layout": return "sections/LayoutSection.qml"
